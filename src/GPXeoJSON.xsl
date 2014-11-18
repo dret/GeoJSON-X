@@ -30,8 +30,7 @@
         </xsl:if>
         <xsl:variable name="trkpt" select="."/>
         <xsl:for-each select="$gpxtpx">
-          <xsl:variable name="gpxtpxname" select="."/>
-          <xsl:variable name="extvalue" select="$trkpt/extensions/gpxtpx:TrackPointExtension/gpxtpx:*[local-name() eq $gpxtpxname]"/>
+          <xsl:variable name="extvalue" select="$trkpt/extensions/gpxtpx:TrackPointExtension/gpxtpx:*[local-name() eq current()]"/>
           <xsl:value-of select="concat('          ', if ( exists($extvalue) ) then $extvalue/text() else '0')"/>
           <xsl:if test="position() ne last()">
             <xsl:text>, &#xa;</xsl:text>

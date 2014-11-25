@@ -1,4 +1,4 @@
-GPXeoJSON
+GeoJSON-X
 =========
 
-Converter from GPX to GeoJSON
+GeoJSON-X is an attempt to make GeoJSON extensions self-describing 

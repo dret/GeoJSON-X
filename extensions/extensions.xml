@@ -2,14 +2,21 @@
 <!-- The source file for GeoJSON-X extensions. Use extensions.xsl to update README.md after any edits. -->
 <?xml-stylesheet type="text/xsl" href="extensions.xsl"?>
 <GeoJSON-X>
+  <!-- GPX 1.1 -->
   <well-known id="time" src="gpx11">A time stamp (defined as xsd:dateTime in GPX 1.1) for an individual geographic point.</well-known>
   <spec id="gpx11" href="http://www.topografix.com/gpx.asp">
     <title>GPX 1.1</title>
     <desc>GPX (the GPS Exchange Format) is a light-weight XML data format for the interchange of GPS data (waypoints, routes, and tracks) between applications and Web services on the Internet.</desc>
   </spec>
-  <spec id="gpxdata" href="https://www.cluetrust.com/Schemas/gpxdata10.xsd">
-    <title>GPXData</title>
-    <desc>The GPXData schema is a mix-in schema for use with the GPX 1.1 schema from Topografix. It was designed with the intent of expanding GPX (using the existing mechanisms) to contain additional content from GPS receivers commonly used for sporting and geocaching activities.
-    </desc>
+  <!-- TrackPointExtension -->
+  <well-known id="atemp" src="tpxv1">ATemp represents the air temperature in degree celsius.</well-known>
+  <well-known id="wtemp" src="tpxv1">WTemp represents the water temperature in degree celsius.</well-known>
+  <well-known id="depth" src="tpxv1">Depth represents the diving depth in meters.</well-known>
+  <well-known id="hr" src="tpxv1">HR represents the heart rate in beats per minute.</well-known>
+  <well-known id="cad" src="tpxv1">Cadence represents the cadence in revolutions per minute.</well-known>
+  <spec id="tpxv1" href="http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+    <title>TrackPointExtension V1</title>
+    <desc>This schema defines Garmin extensions to be used with the GPX 1.1 schema. The root element defined by this schema is intended to be used as a child element of the "extensions" elements in the trkpt element in the GPX 1.1 schema.</desc>
   </spec>
+
 </GeoJSON-X>

@@ -5,5 +5,11 @@
   <well-known id="time" src="gpx11">A time stamp (defined as xsd:dateTime in GPX 1.1) for an individual geographic point.</well-known>
   <spec id="gpx11" href="http://www.topografix.com/gpx.asp">
     <title>GPX 1.1</title>
+    <desc>GPX (the GPS Exchange Format) is a light-weight XML data format for the interchange of GPS data (waypoints, routes, and tracks) between applications and Web services on the Internet.</desc>
+  </spec>
+  <spec id="gpxdata" href="https://www.cluetrust.com/Schemas/gpxdata10.xsd">
+    <title>GPXData</title>
+    <desc>The GPXData schema is a mix-in schema for use with the GPX 1.1 schema from Topografix. It was designed with the intent of expanding GPX (using the existing mechanisms) to contain additional content from GPS receivers commonly used for sporting and geocaching activities.
+    </desc>
   </spec>
 </GeoJSON-X>

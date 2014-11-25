@@ -18,6 +18,11 @@
       <xsl:for-each select="spec">
         <xsl:sort select="title"/>
         <xsl:value-of select="concat(position(), '. [', title/text(), '](', @href, ')')"/>
+        <xsl:if test="exists(desc)">
+          <xsl:text>: </xsl:text>
+          <xsl:value-of select="desc/text()"/>
+        </xsl:if>
+        <xsl:text>&#xa;</xsl:text>
       </xsl:for-each>
     </xsl:result-document>
   </xsl:template>

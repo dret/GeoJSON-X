@@ -6,10 +6,11 @@
     <xsl:text>  "geometries" : [&#xa;</xsl:text>
     <xsl:for-each select="trk">
       <xsl:text>    { "type" : "LineString",&#xa;</xsl:text>
+      <xsl:variable name="time" select="distinct-values(trkseg/trkpt/time/local-name())"/>
       <xsl:variable name="gpxtpx" select="distinct-values(trkseg/trkpt/extensions/gpxtpx:TrackPointExtension/gpxtpx:*/local-name())"/>
-      <xsl:if test="exists($gpxtpx)">
+      <xsl:if test="exists(($time, $gpxtpx))">
         <xsl:text>      "extensions" : [ </xsl:text>
-        <xsl:for-each select="$gpxtpx">
+        <xsl:for-each select="$time, $gpxtpx">
           <xsl:value-of select="concat('&quot;', ., '&quot;')"/>
           <xsl:if test="position() ne last()">
             <xsl:text>, </xsl:text>
@@ -25,8 +26,14 @@
         <xsl:if test="exists(ele)">
           <xsl:value-of select="concat(',&#xa;          ', ele)"/>
         </xsl:if>
-        <xsl:if test="exists($gpxtpx)">
+        <xsl:if test="exists(($time, $gpxtpx))">
           <xsl:text>, &#xa;</xsl:text>
+        </xsl:if>
+        <xsl:if test="exists(time)">
+          <xsl:value-of select="concat('          &quot;', time/text(), '&quot;')"/>
+          <xsl:if test="exists($gpxtpx)">
+            <xsl:text>, &#xa;</xsl:text>
+          </xsl:if>
         </xsl:if>
         <xsl:variable name="trkpt" select="."/>
         <xsl:for-each select="$gpxtpx">

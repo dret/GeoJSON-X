@@ -11,7 +11,7 @@
       <xsl:text>| ----- | ----------- | ------ |&#xa;</xsl:text>
       <xsl:for-each select="well-known">
         <xsl:sort select="@id"/>
-        <xsl:value-of select="concat('| ', @id, ' | ', text(), ' | ', //spec[@id eq current()/@src]/title, ' |&#xa;')"/>
+        <xsl:value-of select="concat('| `', @id, '` | ', text(), ' | ', //spec[@id eq current()/@src]/title, ' |&#xa;')"/>
       </xsl:for-each>
       <xsl:text>&#xa;References&#xa;</xsl:text>
       <xsl:text>----------&#xa;&#xa;</xsl:text>

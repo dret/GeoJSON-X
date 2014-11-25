@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The source file for GeoJSON-X extensions. Use extensions.xsl to update README.md after any edits. -->
+<?xml-stylesheet type="text/xsl" href="extensions.xsl"?>
+<GeoJSON-X>
+  <well-known id="time" src="gpx11">A time stamp (defined as xsd:dateTime in GPX 1.1) for an individual geographic point.</well-known>
+  <spec id="gpx11" href="http://www.topografix.com/gpx.asp">
+    <title>GPX 1.1</title>
+  </spec>
+</GeoJSON-X>

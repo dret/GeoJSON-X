@@ -1,6 +1,6 @@
 # GeoJSON-X
 
-GeoJSON-X is an attempt to make GeoJSON extensions self-describing. In the long run
+GeoJSON-X is an attempt to make GeoJSON extensions self-describing. In the long run, the ongoing work to standardize GeoJSON will hopefully at least mean that it takes less guessing to understand if/how GeoJSON can be extended, and maybe there will even be some guidance on how to extend it so that something along the lines of GeoJSON-X can be done without the need for extra conventions.
 
 
 ## Well-known Extensions

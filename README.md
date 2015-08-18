@@ -1,10 +1,9 @@
-GeoJSON-X
-=========
+# GeoJSON-X
 
-GeoJSON-X is an attempt to make GeoJSON extensions self-describing.
+GeoJSON-X is an attempt to make GeoJSON extensions self-describing. In the long run
 
-Well-known Extensions
----------------------
+
+## Well-known Extensions
 
 The idea for GeoJSON-X is to make GeoJSON extensions self-describing by defining a convention of how to represent data that is not covered by GeoJSON itself, but allowed by GeoJSON's extensibility rules. From [one of the](examples/jake.json) [examples](examples), here's a snippet showing how GeoJSON-X works:
 

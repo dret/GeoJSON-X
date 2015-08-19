@@ -1,5 +1,4 @@
-GeoJSON-X Examples
-==================
+# GeoJSON-X Examples
 
 These are some example files for testing the GeoJSON-X format.
 

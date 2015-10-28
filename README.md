@@ -1,6 +1,6 @@
 # GeoJSON-X
 
-GeoJSON-X is an attempt to make GeoJSON extensions self-describing. In the long run, the ongoing work to standardize GeoJSON will hopefully at least mean that it takes less guessing to understand if/how GeoJSON can be extended, and maybe there will even be some guidance on how to extend it so that something along the lines of GeoJSON-X can be done without the need for extra conventions.
+GeoJSON-X is an attempt to make GeoJSON extensions self-describing. In the long run, [the ongoing work to standardize GeoJSON](https://datatracker.ietf.org/wg/geojson) will hopefully mean that it takes less guessing to understand if/how GeoJSON can be extended, and maybe there will even be some guidance on how to extend it so that something along the lines of GeoJSON-X can be done without the need for extra conventions.
 
 
 ## Well-known Extensions
@@ -25,3 +25,4 @@ The idea for GeoJSON-X is to make GeoJSON extensions self-describing by defining
 ```
 
 Currently, the "well-known" extensions are driven by existing formats such as GPX (and extensions to it). The goal is to have [a developing registry of "well-known extensions"](extensions), and to allow any other extensions to be used, in which case they have to be identified by URIs.
+
